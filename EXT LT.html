@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXT LT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            text-align: center;
+        }
+
+        .button-row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .button-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 10px;
+        }
+
+        .button {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            border: none;
+            background-color: red;
+            color: white;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button.on {
+            background-color: green;
+        }
+
+        .label {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button-row">
+            <div class="button-wrapper">
+                <label class="label">STROBE ON</label>
+                <button class="button" onclick="toggleStrobe(this)">OFF</button>
+                <label class="label">AUTO</label>
+            </div>
+            <div class="button-wrapper">
+                <label class="label">BEACON ON </label>
+                <button class="button" onclick="toggleStrobe(this)">OFF</button>
+            </div>
+            <div class="button-wrapper">
+                <label class="label">Wing ON</label>
+                <button class="button" onclick="toggleStrobe(this)">OFF</button>
+            </div>
+            <div class="button-wrapper">
+                <label class="label">NAV & LOGO</label>
+                <button class="button" onclick="toggleStrobe(this)">OFF</button>
+                <label class="label">1</label>
+            </div>
+        </div>
+        <div class="button-row">
+            <div class="button-wrapper">
+                <label class="label">RWY TURNOFF ON</label>
+                <button class="button" onclick="toggleStrobe(this)">OFF</button>
+            </div>
+            <div class="button-wrapper">
+                <label class="label">LAND L</label>
+                <button class="button" onclick="toggleStrobe(this)">OFF</button>
+                <label class="label">RETRACT</label>
+            </div>
+            <div class="button-wrapper">
+                <label class="label">LAND R</label>
+                <button class="button" onclick="toggleStrobe(this)">OFF</button>
+                <label class="label">RETRACT</label>
+            </div>
+            <div class="button-wrapper">
+                <label class="label">NOSE</label>
+                <button class="button" onclick="toggleStrobe(this)">OFF</button>
+                <label class="label">Teste</label>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleStrobe(button) {
+            button.classList.toggle('on');
+            button.textContent = button.classList.contains('on') ? 'ON' : 'OFF';
+        }
+    </script>
+</body>
+</html>
